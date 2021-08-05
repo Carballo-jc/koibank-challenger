@@ -1,8 +1,9 @@
-import { ALL_DATA, ALL_TYPE, STATUS, GET_A_Z } from "../actions";
+import { ALL_DATA, ALL_TYPE, STATUS, GET_A_Z ,MAYOR_MENOR} from "../actions";
 import setFilters from "../selectores/setFilters";
 import getItemActive from "../selectores/getItemActive";
 import orderAlphabetical from "../selectores/orderAlphabetical";
 import { db } from "../utils/db";
+import setOrderCuit from "../selectores/setOrderCuit";
 
 const initialState = {
   allData: db,
@@ -31,7 +32,12 @@ const dataInfo = (state = initialState, action) => {
           return{
               ...state,
               allData: [...orderAlphabetical(action.payload,state.data)]
-          }
+          };
+          case MAYOR_MENOR:
+            return {
+              ...state,
+              allData: [...setOrderCuit(action.payload,state.data)]
+            };
     default:
       return state;
   }

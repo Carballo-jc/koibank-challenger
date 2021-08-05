@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getOrder } from "../../actions/index";
+import { getOrderStatus } from "../../actions/index";
 import styles from "./styles.module.css";
 
 const Filters = () => {
-  const [filter, setFilter] = useState("ALL");
+  const [filter, setFilter] = useState();
   // console.log(filter);
   const handleFilter = (e) => {
     setFilter(e.target.value);
   };
   const dispatch = useDispatch();
   const getActive = () => {
-    dispatch(getOrder(filter));
+    dispatch(getOrderStatus(filter));
   };
   useEffect(() => {
     getActive();

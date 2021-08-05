@@ -23,8 +23,8 @@ const FilterCuit = () => {
       onChange={(e) => handleFilter(e)}
     >
       <option>CUIT</option>
-      <option value={1}>Mayor</option>
-      <option value={0}>Menor</option>
+      <option value="MAYOR">Mayor</option>
+      <option value="MENOR">Menor</option>
     </select>
   );
 };
