@@ -1,0 +1,42 @@
+export const db = [
+  {
+    id: "12",
+    comercio: "DIDI",
+    cuit: "25",
+    concepto: "tienda mixta",
+    balance: "50",
+    status: 1,
+  },
+  {
+    id: "13",
+    comercio: "chinaTauw",
+    cuit: "26",
+    concepto: "tienda china",
+    balance: "45",
+    status: 0,
+  },
+  {
+    id: "133",
+    comercio: "chinaTauw",
+    cuit: "26",
+    concepto: "tienda china",
+    balance: "45",
+    status: 0,
+  },
+  {
+    id: "14",
+    comercio: "dia",
+    cuit: "13",
+    concepto: "super mercado",
+    balance: "45",
+    status: 1,
+  },
+  {
+    id: "15",
+    comercio: "banco",
+    cuit: "28",
+    concepto: "banco",
+    balance: "45",
+    status: 1,
+  },
+];
